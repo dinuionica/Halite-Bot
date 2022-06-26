@@ -1,0 +1,112 @@
+-------------------------------------------------------------------------------
+Proiect PA 2022 - Halite Bot
+Echipa SBI
+
+-------------------------------------------------------------------------------
+Membri:
+    - Dinu Ion-Irinel - ion_irinel.dinu@stud.acs.upb.ro
+    - Pana Sergiu-Laurentiu - sergiu.pana@stud.acs.upb.ro
+    - Serban Bianca-Sanziana - bianca.serban2506@stud.acs.upb.ro
+
+-------------------------------------------------------------------------------
+Instructiuni de rulare:
+    - rulare sursa: python3 MyBot.py
+    - rulare script impotriva botilor echipei de PA: 
+        python3 ./run.py --cmd "python3 MyBot.py"
+    - rulare intr-un scenariu custom:
+        - se modifica parametrii din script-ul "run_game.sh", in functie
+        de preferinte (botii impotriva caruia se joaca meciul, marimea hartii)
+        ./run_game.sh
+
+-------------------------------------------------------------------------------
+Detalii despre structura proiectului:
+    Proiectul contine patru fisiere:
+        - "MyBot.py" - entry-point-ul bot-ului, contine asignarea miscarilor
+        - "BotHelpers.py" - contine functiile ajutatoare pentru implementarea
+        logicii bot-ului
+        - "hlt.py" - contine functiile care descriu state-ul jocului
+        - Makefile - contine regula de run
+        - README - contine detalii despre implementare si structura
+
+-------------------------------------------------------------------------------
+Responsabilitatea fiecarui membru al echipei:
+    In prima faza, fiecare membru a venit cu idei pe care le-am pus cap la cap,
+    iar apoi am optimizat / modificat / renuntat / adaugat idei, pe masura ce
+    ne loveam de alte probleme / bug-uri si trebuia sa gasim noi modalitati
+    prin care bot-ul nostru sa fie performant
+
+    Am lucrat cu totii impreuna in majoritatea timpului, stand pe apeluri pe
+    discord, fiecare membru avand un aport egal asupra proiectului.
+
+-------------------------------------------------------------------------------
+Idei care s-au facut remarcate:
+    - Determinarea directiei ideale in functie de strength si productie.
+    - Daca doua square-uri aliate sunt in pericol sa se atace intre ele
+    cand suma strength-urilor lor ar depasi maximul, acestea sa se duca
+    in aceeasi directie.
+    - Tratatrea cu prioritate a square-urilor care au strength-ul maxim.
+    - Ghidarea square-urilor cu strength mai mic decat 255 in functie de
+    cele care au strength-ul egal cu 255.
+
+-------------------------------------------------------------------------------
+Logica de executie a mutarilor:
+    - Se determina mai intai mutarile pe care le vor face square-urile
+    cu strength-ul maxim, astfel
+        -> daca are un alt vecin cu strength maxim, se vor muta amandoi
+        in aceeasi directie.
+        -> daca nu, se incearca sa se verifice mutarea optima un functie
+        de euristica (raportul dintre produtie si strength)
+        -> daca mutarea optima a fost gasita (square-ul curent se afla pe
+        margine), se va efectua acea mutare
+        -> daca nu s-a gasit mutarea, mergem catre cel mai apropiat square
+        neocupat de noi
+
+    - Se determina apoi mutarile pe care le vor face square-urile care nu au
+    strength-ul maxim, astfel
+        -> daca strength-ul lor este egal cu 0 sau de 5 ori mai mic decat
+        productia square-ului respectiv, sta pe loc pentru a acumula strength
+        -> verificam daca printre vecinii acestui square se afla vreun aliat
+        al carui strength este maxim, caz in care vrem sa evitam ca acestia sa
+        se intersecteze.
+        -> fie cele doua square-uri fac swap (in cazul in care cel mic nu poate
+        sa atace), fie cel mic se misca in directia calculata anterior a celui
+        mare.
+        -> daca square-ul mic nu are vreun vecin cu strength maxim, isi va
+        calcula directia optima si va verifica daca o poate cuceri sau nu.
+        -> daca nu poate, va sta pe loc sa acumuleze strength.
+        -> daca poate, o va cuceri.
+
+-------------------------------------------------------------------------------
+Functii implementate:
+    - get_move - asigneaza mutarea pentru square-ul curent (doar pentru
+    square-urile cu strenght diferit de 255)
+    - get_move_max - asigneaza mutarea pentru square-ul curent (doar pentru
+    square-urile cu strength egal cu 255)
+    - check_neighbour_diagonal - verifica daca un square dat ca parametru
+    este un vecin de pe diagonala square-ului pe care se apeleaza functia
+    - find_nearest_enemy_direction - gaseste cel mai apropiat square inamic sau
+    neutru, intr-una din cele patru directii cardinale
+    - heuristic - calculeaza eficienta square-ului, determinand raportul
+    productie / strength, daca acest raport este posibil
+                - daca nu este posibil, se calculeaza damage-ul maxim potential
+                tinand cont de feature-ul de overkill al jocului
+    - find_allied_neighbours - returneaza o lista cu toti veciniii aliati ai
+    square-ului dat, inclusiv vecinii de pe diagonala.
+    - find_all_neighbours - returneaza o lista cu toti vecinii unui square,
+    inclusiv cei de pe diagonala, indiferent de owner
+    - find_neighbour_list_enemy - construieste lista de vecini inamici de pe
+    directiile cardinale ai square-ului dat ca parametru
+    - get_direction_to_square - returneaza directia pe care trebuie sa o urmeze
+    square-ul dat ca parametru pentru a ajunge la square-ul destinatie dat ca 
+    parametru
+
+
+-------------------------------------------------------------------------------
+Surse de inspiratie:
+    Forumul oficial (http://2016.forums.halite.io/) a reprezentat punctul de
+    plecare pentru proiect.
+
+Link-uri utile:
+https://2016.halite.io/rules_game.html
+http://2016.forums.halite.io/t/so-youve-improved-the-random-bot-now-what/482.html
+https://2016.halite.io/basics_improve_random.html
