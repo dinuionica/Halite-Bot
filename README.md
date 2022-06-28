@@ -38,43 +38,43 @@ different platforms, each member having an equal contribution on the project.
 
 -------------------------------------------------------------------------------
 # Ideas that stood out:<br>
-    - Determining the ideal direction depending on strength and production.<br>
-    - If two allied squares are in danger of attacking each other
-    when the sum of their strengths exceeds the maximum, they should go
+- Determining the ideal direction depending on strength and production.<br>
+- If two allied squares are in danger of attacking each other
+when the sum of their strengths exceeds the maximum, they should go
+in the same direction.<br>
+- Treatment with priority of squares that have the maximum strength.<br>
+- Guide squares with a strength of less than 255 depending on
+those with a strength equal to 255.<br>
+
+-------------------------------------------------------------------------------
+# Move execution logic:<br>
+- The moves that the squares will make are determined first
+with maximum strength, thus<br>
+    -> if he has another neighbor with maximum strength, they will both move
     in the same direction.<br>
-    - Treatment with priority of squares that have the maximum strength.<br>
-    - Guide squares with a strength of less than 255 depending on
-    those with a strength equal to 255.<br>
+    -> if not, try to check the optimal move of a function
+    of heuristics (ratio between production and strength)<br>
+    -> if the optimal move was found (the current square is on
+    edge), that move will be made<br>
+    -> if the move was not found, we go to the nearest square
+    unoccupied by us<br>
 
--------------------------------------------------- ----------------------------
-Move execution logic:
-    - The moves that the squares will make are determined first
-    with maximum strength, thus
-        -> if he has another neighbor with maximum strength, they will both move
-        in the same direction.
-        -> if not, try to check the optimal move of a function
-        of heuristics (ratio between production and strength)
-        -> if the optimal move was found (the current square is on
-        edge), that move will be made
-        -> if the move was not found, we go to the nearest square
-        unoccupied by us
+- It is then determined the moves that the squares that do not have will make
+maximum strength, thus<br>
+    -> if their strength is equal to 0 or 5 times less than
+    the production of that square stands still to accumulate strength<br>
+    -> we check if there is an ally among the neighbors of this square
+    whose strength is maximum, in which case we want to avoid them
+    intersect.<br>
+    -> either the two squares swap (if the little one can't
+    to attack), or the little one moves in the previously calculated direction of the one
+    big.<br>
+    -> if the small square does not have a neighbor with maximum strength, it will
+    calculate the optimal direction and will check if he can conquer it or not.<br>
+    -> if he can't, he will stand still to accumulate strength.<br>
+    -> if he can, he will conquer it.<br>
 
-    - It is then determined the moves that the squares that do not have will make
-    maximum strength, thus
-        -> if their strength is equal to 0 or 5 times less than
-        the production of that square stands still to accumulate strength
-        -> we check if there is an ally among the neighbors of this square
-        whose strength is maximum, in which case we want to avoid them
-        intersect.
-        -> either the two squares swap (if the little one can't
-        to attack), or the little one moves in the previously calculated direction of the one
-        big.
-        -> if the small square does not have a neighbor with maximum strength, it will
-        calculate the optimal direction and will check if he can conquer it or not.
-        -> if he can't, he will stand still to accumulate strength.
-        -> if he can, he will conquer it.
-
--------------------------------------------------- ----------------------------
+-------------------------------------------------------------------------------
 Implemented functions:
     - get_move - assigns the move to the current square (only for
     squares with strenght other than 255)
