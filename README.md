@@ -2,7 +2,7 @@
 # Halite Bot Project 2022
 ## The SBI team
 
-https://github.com/dinuionica/Halite-Bot/issues/1#issue-1287789993
+https://github.com/dinuionica/Halite-Bot/issues/2#issue-1287795724
 -------------------------------------------------------------------------------
 Members:<br>
     - Dinu Ion-Irinel - ion_irinel.dinu@stud.acs.upb.ro<br>
