@@ -103,6 +103,6 @@ Implemented functions:
  departure for the project.
 
 # Useful Links:
-https://2016.halite.io/rules_game.html
-http://2016.forums.halite.io/t/so-youve-improved-the-random-bot-now-what/482.html
-https://2016.halite.io/basics_improve_random.html
+https://2016.halite.io/rules_game.html<br>
+http://2016.forums.halite.io/t/so-youve-improved-the-random-bot-now-what/482.html<br>
+https://2016.halite.io/basics_improve_random.html<br>
