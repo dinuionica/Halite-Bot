@@ -28,14 +28,14 @@ Members:<br>
     - README - contains details about implementation and structure
 
 -------------------------------------------------- ----------------------------
-#Responsibility of each team member:
-    In the first phase, each member came up with ideas that we put together,
-    and then I optimized / modified / gave up / added ideas, as
-    we ran into other problems / bugs and had to find new ways
-    through which our bot can perform
-    We all worked together most of the time, sitting on calls on
-    disagreement, each member having an equal contribution on the project.
-    
+# Responsibility of each team member:<br>
+In the first phase, each member came up with ideas that we put together,<br>
+and then I optimized / modified / gave up / added ideas, as<br>
+we ran into other problems / bugs and had to find new ways
+through which our bot can perform<br>
+We all worked together most of the time, sitting on calls on
+disagreement, each member having an equal contribution on the project.
+
     -------------------------------------------------- ----------------------------
 Ideas that stood out:
     - Determining the ideal direction depending on strength and production.
@@ -100,7 +100,7 @@ Implemented functions:
 -------------------------------------------------------------------------------
 # Sources of inspiration:
  The official forum (http://2016.forums.halite.io/) represented the point of
- departure for the project.
+ start for the project.
 
 # Useful Links:
 https://2016.halite.io/rules_game.html<br>
