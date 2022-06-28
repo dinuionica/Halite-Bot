@@ -1,6 +1,6 @@
 -------------------------------------------------------------------------------
 # Halite Bot Project 2022
-## The SBI team
+# The SBI team
 
 ![Screenshot from 2022-06-28 22-29-31](https://user-images.githubusercontent.com/51510817/176270236-5e8fb08f-cde9-4149-82dc-5df039878410.png)
 
@@ -11,7 +11,7 @@ Members:<br>
     - Serban Bianca-Sanziana - bianca.serban2506@stud.acs.upb.ro<br>
 
 -------------------------------------------------------------------------------
-# Running instructions:
+## Running instructions:
     - run source: python3 MyBot.py
     - running script against PA team bots:
         python3 ./run.py --cmd "python3 MyBot.py"
@@ -21,7 +21,7 @@ Members:<br>
         ./run_game.sh
 
 -------------------------------------------------------------------------------
-# Details about the project structure:
+## Details about the project structure:
     - "MyBot.py" - the entry-point of the bot, contains the assignment of movements
     - "BotHelpers.py" - contains the implementation help functions
     bot logic<
@@ -30,7 +30,7 @@ Members:<br>
     - README - contains details about implementation and structure
 
 -------------------------------------------------------------------------------
-# Responsibility of each team member:<br>
+## Responsibility of each team member:<br>
 In the first phase, each member came up with ideas that we put together,
 and then I optimized / modified / gave up / added ideas, as
 we ran into other problems / bugs and had to find new ways
@@ -39,7 +39,7 @@ We all worked together most of the time, sitting on calls on
 different platforms, each member having an equal contribution on the project.
 
 -------------------------------------------------------------------------------
-# Ideas that stood out:<br>
+## Ideas that stood out:<br>
 - Determining the ideal direction depending on strength and production.<br>
 - If two allied squares are in danger of attacking each other
 when the sum of their strengths exceeds the maximum, they should go
@@ -49,7 +49,7 @@ in the same direction.<br>
 those with a strength equal to 255.<br>
 
 -------------------------------------------------------------------------------
-# Move execution logic:<br>
+## Move execution logic:<br>
 - The moves that the squares will make are determined first
 with maximum strength, thus<br>
     -> if he has another neighbor with maximum strength, they will both move
@@ -77,7 +77,7 @@ maximum strength, thus<br>
     -> if he can, he will conquer it.<br>
 
 -------------------------------------------------------------------------------
-# Implemented functions:
+## Implemented functions:
 - get_move - assigns the move to the current square (only for
 squares with strenght other than 255)<br>
 - get_move_max - assigns the move to the current square (only for
@@ -100,11 +100,11 @@ the cardinal directions of the given square as a parameter<br>
 the given square as a parameter to reach the given given square as
 parameter<br>
 -------------------------------------------------------------------------------
-# Sources of inspiration:
+## Sources of inspiration:
  The official forum (http://2016.forums.halite.io/) represented the point of
  start for the project.
 
-# Useful Links:
+## Useful Links:
 https://2016.halite.io/rules_game.html<br>
 http://2016.forums.halite.io/t/so-youve-improved-the-random-bot-now-what/482.html<br>
 https://2016.halite.io/basics_improve_random.html<br>
