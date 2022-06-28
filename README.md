@@ -3,13 +3,13 @@
 ## The SBI team
 
 -------------------------------------------------------------------------------
-Members:
+Members:<br?
     - Dinu Ion-Irinel - ion_irinel.dinu@stud.acs.upb.ro<br>
     - Pana Sergiu-Laurentiu - sergiu.pana@stud.acs.upb.ro<br>
     - Serban Bianca-Sanziana - bianca.serban2506@stud.acs.upb.ro<br>
 
 -------------------------------------------------------------------------------
-Driving instructions:<br>
+Running instructions:<br>
     - run source: python3 MyBot.py<br>
     - running script against PA team bots:<br>
         python3 ./run.py --cmd "python3 MyBot.py"<br>
@@ -19,14 +19,14 @@ Driving instructions:<br>
         ./run_game.sh
 
 -------------------------------------------------- ----------------------------
-Details about the project structure:
-    The project contains four files:
-        - "MyBot.py" - the entry-point of the bot, contains the assignment of movements
-        - "BotHelpers.py" - contains the implementation help functions
-        bot logic
-        - "hlt.py" - contains the functions that describe the state of the game
-        - Makefile - contains the run rule
-        - README - contains details about implementation and structure
+Details about the project structure:<br>
+    The project contains four files:<br>
+        - "MyBot.py" - the entry-point of the bot, contains the assignment of movements<br>
+        - "BotHelpers.py" - contains the implementation help functions<br>
+        bot logic<br>
+        - "hlt.py" - contains the functions that describe the state of the game<br>
+        - Makefile - contains the run rule<br>
+        - README - contains details about implementation and structure<br>
 
 -------------------------------------------------- ----------------------------
 Responsibility of each team member:
