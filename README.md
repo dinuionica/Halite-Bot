@@ -28,7 +28,7 @@ Members:<br>
     - README - contains details about implementation and structure
 
 -------------------------------------------------- ----------------------------
-# Responsibility of each team member:
+#Responsibility of each team member:
     In the first phase, each member came up with ideas that we put together,
     and then I optimized / modified / gave up / added ideas, as
     we ran into other problems / bugs and had to find new ways
