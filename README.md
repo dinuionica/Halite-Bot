@@ -28,12 +28,11 @@ Members:<br>
     - README - contains details about implementation and structure
 
 -------------------------------------------------- ----------------------------
-Responsibility of each team member:
+# Responsibility of each team member:
     In the first phase, each member came up with ideas that we put together,
     and then I optimized / modified / gave up / added ideas, as
     we ran into other problems / bugs and had to find new ways
     through which our bot can perform
-
     We all worked together most of the time, sitting on calls on
     disagreement, each member having an equal contribution on the project.
     
