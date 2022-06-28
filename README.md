@@ -20,13 +20,12 @@ Members:<br>
 
 -------------------------------------------------------------------------------
 # Details about the project structure:
-    The project contains four files:
-        - "MyBot.py" - the entry-point of the bot, contains the assignment of movements
-        - "BotHelpers.py" - contains the implementation help functions
-        bot logic<
-        - "hlt.py" - contains the functions that describe the state of the game
-        - Makefile - contains the run rule
-        - README - contains details about implementation and structure
+    - "MyBot.py" - the entry-point of the bot, contains the assignment of movements
+    - "BotHelpers.py" - contains the implementation help functions
+    bot logic<
+    - "hlt.py" - contains the functions that describe the state of the game
+    - Makefile - contains the run rule
+    - README - contains details about implementation and structure
 
 -------------------------------------------------- ----------------------------
 Responsibility of each team member:
