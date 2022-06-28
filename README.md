@@ -4,16 +4,16 @@
 
 -------------------------------------------------------------------------------
 Members:
-    - Dinu Ion-Irinel - ion_irinel.dinu@stud.acs.upb.ro
-    - Pana Sergiu-Laurentiu - sergiu.pana@stud.acs.upb.ro
-    - Serban Bianca-Sanziana - bianca.serban2506@stud.acs.upb.ro
+    - Dinu Ion-Irinel - ion_irinel.dinu@stud.acs.upb.ro<br>
+    - Pana Sergiu-Laurentiu - sergiu.pana@stud.acs.upb.ro<br>
+    - Serban Bianca-Sanziana - bianca.serban2506@stud.acs.upb.ro<br>
 
--------------------------------------------------- ----------------------------
-Driving instructions:
-    - run source: python3 MyBot.py
-    - running script against PA team bots:
-        python3 ./run.py --cmd "python3 MyBot.py"
-    - running in a custom scenario:
+-------------------------------------------------------------------------------
+Driving instructions:<br>
+    - run source: python3 MyBot.py<br>
+    - running script against PA team bots:<br>
+        python3 ./run.py --cmd "python3 MyBot.py"<br>
+    - running in a custom scenario:<br>
         - the parameters in the "run_game.sh" script change, depending
         preferences (bots against which the match is played, map size)
         ./run_game.sh
