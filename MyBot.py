@@ -1,4 +1,4 @@
-# SBI Team
+# Copyright SBI Team 2022
 from BotHelpers import *
 
 # The main point of the game
