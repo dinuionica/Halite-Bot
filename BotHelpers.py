@@ -1,4 +1,4 @@
-# SBI Team
+# Copyright SBI Team 2022
 import hlt
 from hlt import NORTH, EAST, SOUTH, WEST, STILL, Move, Square, \
     opposite_cardinal
