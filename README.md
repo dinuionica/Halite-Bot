@@ -27,24 +27,24 @@ Members:<br>
     - Makefile - contains the run rule
     - README - contains details about implementation and structure
 
--------------------------------------------------- ----------------------------
+-------------------------------------------------------------------------------
 # Responsibility of each team member:<br>
 In the first phase, each member came up with ideas that we put together,
 and then I optimized / modified / gave up / added ideas, as
 we ran into other problems / bugs and had to find new ways
 through which our bot can perform
 We all worked together most of the time, sitting on calls on
-disagreement, each member having an equal contribution on the project.
+different platforms, each member having an equal contribution on the project.
 
-    -------------------------------------------------- ----------------------------
-Ideas that stood out:
-    - Determining the ideal direction depending on strength and production.
+-------------------------------------------------------------------------------
+# Ideas that stood out:<br>
+    - Determining the ideal direction depending on strength and production.<br>
     - If two allied squares are in danger of attacking each other
     when the sum of their strengths exceeds the maximum, they should go
-    in the same direction.
-    - Treatment with priority of squares that have the maximum strength.
+    in the same direction.<br>
+    - Treatment with priority of squares that have the maximum strength.<br>
     - Guide squares with a strength of less than 255 depending on
-    those with a strength equal to 255.
+    those with a strength equal to 255.<br>
 
 -------------------------------------------------- ----------------------------
 Move execution logic:
