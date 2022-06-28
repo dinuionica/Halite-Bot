@@ -75,28 +75,28 @@ maximum strength, thus<br>
     -> if he can, he will conquer it.<br>
 
 -------------------------------------------------------------------------------
-Implemented functions:
-    - get_move - assigns the move to the current square (only for
-    squares with strenght other than 255)
-    - get_move_max - assigns the move to the current square (only for
-    squares with strength equal to 255)
-    - check_neighbor_diagonal - check if a square is given as a parameter
-    is a neighbor on the diagonal of the square on which the function is called
-    - find_nearest_enemy_direction - find the nearest enemy square or
-    neutral, in one of the four cardinal directions
-    - heuristic - calculates the efficiency of the square, determining the ratio
-    production / strength, if this ratio is possible
-                - if not possible, the maximum potential damage is calculated
-                taking into account the overkill feature of the game
-    - find_allied_neighbours - returns a list of all your allied neighbors
-    the given square, including the neighbors on the diagonal.
-    - find_all_neighbours - returns a list of all neighbors of a square,
-    including those on the diagonal, regardless of owner
-    - find_neighbour_list_enemy - build the list of enemy neighbors on
-    the cardinal directions of the given square as a parameter
-    - get_direction_to_square - returns the direction it should follow
-    the given square as a parameter to reach the given given square as
-    parameter
+# Implemented functions:
+- get_move - assigns the move to the current square (only for
+squares with strenght other than 255)<br>
+- get_move_max - assigns the move to the current square (only for
+squares with strength equal to 255)<br>
+- check_neighbor_diagonal - check if a square is given as a parameter
+is a neighbor on the diagonal of the square on which the function is called<br>
+- find_nearest_enemy_direction - find the nearest enemy square or
+neutral, in one of the four cardinal directions<br>
+- heuristic - calculates the efficiency of the square, determining the ratio
+production / strength, if this ratio is possible<br>
+            - if not possible, the maximum potential damage is calculated
+            taking into account the overkill feature of the game<br>
+- find_allied_neighbours - returns a list of all your allied neighbors
+the given square, including the neighbors on the diagonal.<br>
+- find_all_neighbours - returns a list of all neighbors of a square,
+including those on the diagonal, regardless of owner<br>
+- find_neighbour_list_enemy - build the list of enemy neighbors on
+the cardinal directions of the given square as a parameter<br>
+- get_direction_to_square - returns the direction it should follow
+the given square as a parameter to reach the given given square as
+parameter<br>
 -------------------------------------------------------------------------------
 # Sources of inspiration:
  The official forum (http://2016.forums.halite.io/) represented the point of
