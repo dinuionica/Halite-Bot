@@ -98,7 +98,7 @@ Implemented functions:
     the given square as a parameter to reach the given given square as
     parameter
 -------------------------------------------------------------------------------
-Sources of inspiration:
+# Sources of inspiration:
      The official forum (http://2016.forums.halite.io/) represented the point of
      departure for the project.
 
