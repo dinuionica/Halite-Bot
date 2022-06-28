@@ -99,10 +99,10 @@ Implemented functions:
     parameter
 -------------------------------------------------------------------------------
 # Sources of inspiration:
-     The official forum (http://2016.forums.halite.io/) represented the point of
-     departure for the project.
+ The official forum (http://2016.forums.halite.io/) represented the point of
+ departure for the project.
 
-Useful Links:
+# Useful Links:
 https://2016.halite.io/rules_game.html
 http://2016.forums.halite.io/t/so-youve-improved-the-random-bot-now-what/482.html
 https://2016.halite.io/basics_improve_random.html
